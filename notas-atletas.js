@@ -1,24 +1,39 @@
-// Calcula a media valida do atleta
- calculaMediaValida() {
-    // Ordenando as notas
-   this.notas = this.notas.sort();
-
-   // Eliminando a maior e menor nota
-   this.notas = this.notas.slice(1, 4);
-
-   // Calculando a media
-   // Acumulador para salvar a soma das notas
-   var acumulador = 0;
-   // Metodo forEach para somar as notas
-   this.notas.forEach((nota) => {
-     acumulador = nota + acumulador;
-   });
-
-   // Calculo da media utilizando o acumulador e a quantidade de notas
-   let mediaValida = acumulador / this.notas.length;
-
-   // Retorna a media valida do atleta
-   return mediaValida;
- }
-
+class Passaporte {
+  constructor(nome, sobrenome){
+      this.nome = nome
+      this.sobrenome = sobrenome
+  }
+  obterNome(){
+      return this.nome.toLowerCase()
+  }
+  obterSobrenome(){
+      return this.sobrenome.toUpperCase()
+  }
+  obterNomeCompleto(){
+      return this.nome +" "+ this.sobrenome
+  }
+  obterIniciais(){
+      return this.nome[0] +"."+ this.sobrenome[0] + "." 
+  }
+  obterEhNomeValido(){
+      if (
+          this.nome.length > 0 &&
+          this.sobrenome.length > 0 &&
+          this.sobrenome.endsWith(".") === false
+          ) {
+              return "Sim";
+      } else {
+          return "Não";
+      }
+  }
 }
+
+// Uso da classe
+let mario = new Passaporte("Mario", "Borges");
+console.log(mario.obterNome());
+console.log(mario.obterSobrenome());
+console.log(mario.obterNomeCompleto());
+console.log(mario.obterIniciais());
+console.log(mario.obterEhNomeValido());
+
+console.log("---");
