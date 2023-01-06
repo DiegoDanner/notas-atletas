@@ -12,15 +12,18 @@
         <h2>Resultados da Competição</h2>   
         <div>
             <div>
-                <label for="dv-nome">Atleta</label>
-                <input  style="margin: 1%;" type="text" placeholder="Nome do Atleta" 
-                        id="dv-nome" autocomplete="off">
+                <label for="dv-nome">Nome do Atleta</label>
+                
+                <select width="300" style="margin: 1%;" id="dv-nome" class="select"> 
+                            <option value="">NOME DO ATLETA</option>
+                            <option>Cesar Abascal</option>
+                            <option>Fernando Puntel</option>
+                            <option>Daiane Jelinsky</option>
+                            <option>Bruno Castro</option>
+                </select>
+
             </div>
-            <div>
-                <label for="dv-sobrenome">Sobrenome:</label>
-                <input style="margin: 1%;" type="text" placeholder="Sobrenome do Atleta" 
-                        id="dv-sobrenome" autocomplete="off">
-            </div>
+            
         </div>
     
         <div  >
@@ -32,25 +35,18 @@
                     </tr>
                 </thead>
                 <tbody>
+                   
                     <tr>
-                        <td>Nome do Atleta</td>
+                        <td>Nome Completo Do Atleta</td>
                         <td id="dv-resposta-1"></td>
                     </tr>
                     <tr>
-                        <td>Sobrenome do Atleta</td>
+                        <td>Notas Obtidas</td>
                         <td id="dv-resposta-2"></td>
                     </tr>
                     <tr>
-                        <td>Nome Completo</td>
-                        <td id="dv-resposta-3"></td>
-                    </tr>
-                    <tr>
-                        <td>Notas Obtidas</td>
-                        <td id="dv-resposta-4"></td>
-                    </tr>
-                    <tr>
                         <td>Média Válida</td>
-                        <td id="dv-resposta-5"></td>
+                        <td id="dv-resposta-3"></td>
                     </tr>
                 </tbody>
             </table>
