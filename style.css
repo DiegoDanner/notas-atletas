@@ -9,3 +9,13 @@ body {
     background-color: rgb(0, 255, 234);
     
   }
+  table {
+    background-color: rgb(179, 255, 0);
+    border: 3px solid green;
+  }
+  th {
+    border: 1px solid green;
+  }
+  td {
+    border: 1px solid green;
+  }
